@@ -27,6 +27,7 @@
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#certificates">Certificates</a>
+      <a href="#album">Album</a>
       <a href="#music">My Music</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -50,8 +51,8 @@
       <h1 class="hero-title" aria-label="Portfolio">PORTFOLIO</h1>
 
       <div class="hero-photo">
-        <!-- Put your photo at images/profile.jpg (or .png). The illustration shows until then. -->
-        <img src="images/profile.jpg" alt="Portrait of Althea Marie Alba" onerror="this.style.display='none'" />
+        <!-- Put your photo at images/profile.png (or .png). The illustration shows until then. -->
+        <img src="images/profile.png" alt="Portrait of Althea Marie Alba" onerror="this.style.display='none'" />
         <svg class="avatar-fallback" viewBox="0 0 200 260" aria-hidden="true">
           <defs>
             <linearGradient id="av" x1="0" y1="0" x2="0" y2="1">
@@ -208,11 +209,13 @@
       </header>
       <div class="edu-grid">
         <article class="edu-card reveal">
+          <img class="edu-logo" src="images/aclc-logo.png" alt="ACLC College logo" />
           <span class="edu-year">2023 – 2027</span>
           <h3>Bachelor of Science in Information Technology</h3>
           <p>ACLC College of Meycauayan</p>
         </article>
         <article class="edu-card reveal">
+          <img class="edu-logo edu-seal" src="images/arellano-seal.png" alt="Arellano University seal" />
           <span class="edu-year">2021 – 2023</span>
           <h3>Science, Technology, Engineering and Mathematics</h3>
           <p>Arellano University – Elisa Esguerra Campus</p>
@@ -231,7 +234,6 @@
         <li class="reveal"><h3>School Project Presentations &amp; Exhibitions</h3><p>Software Engineering Game Exhibit</p></li>
         <li class="reveal"><h3>Game Development Project Experience</h3><p>Designing and building 2D games with GameMaker.</p></li>
         <li class="reveal"><h3>Multimedia Production</h3><p>Video editing and multimedia projects.</p></li>
-        <li class="reveal"><h3>Student Leadership Activities</h3><p>Add your role, organization, and year here.</p></li>
         <li class="reveal"><h3>OJT / Internship</h3><p>Network Support · 8890 Fiber to Deca Homes, under iTECH rar company</p></li>
       </ol>
     </section>
@@ -244,17 +246,74 @@
         <span class="section-sub">Achievements &amp; recognitions</span>
       </header>
       <div class="cert-grid">
-        <!-- Replace each card with your real seminar title and date. Add images in images/certs/ if you want previews. -->
-        <article class="cert reveal"><span class="cert-icon">✦</span><h3>Seminar Certificate</h3><p>Add seminar title &amp; date</p></article>
-        <article class="cert reveal"><span class="cert-icon">✦</span><h3>Seminar Certificate</h3><p>Add seminar title &amp; date</p></article>
-        <article class="cert reveal"><span class="cert-icon">✦</span><h3>Seminar Certificate</h3><p>Add seminar title &amp; date</p></article>
+        <article class="cert reveal">
+          <button class="cert-img" data-full="images/certs/seminar-participation.jpg" aria-label="View certificate of participation">
+            <img src="images/certs/seminar-participation.jpg" alt="Certificate of Participation, Preparing Future IT Professionals seminar" loading="lazy" />
+          </button>
+          <div class="cert-body">
+            <p class="work-index">Certificate of Participation</p>
+            <h3>Preparing Future IT Professionals</h3>
+            <p>Transitioning to the Corporate Environment with Professionalism and Integrity</p>
+            <p class="cert-meta">ACLC College of Meycauayan · November 6, 2026</p>
+          </div>
+        </article>
+        <article class="cert reveal">
+          <button class="cert-img" data-full="images/certs/student-speaker.jpg" aria-label="View certificate of appreciation">
+            <img src="images/certs/student-speaker.jpg" alt="Certificate of Appreciation for Student Speaker on Artificial Intelligence" loading="lazy" />
+          </button>
+          <div class="cert-body">
+            <p class="work-index">Certificate of Appreciation</p>
+            <h3>Student Speaker: Artificial Intelligence</h3>
+            <p>Shared knowledge and insights about AI, its applications, types, and role in Information Technology.</p>
+            <p class="cert-meta">ACLC College of Meycauayan · October 21, 2026</p>
+          </div>
+        </article>
+      </div>
+      <div class="lightbox" id="lightbox" hidden><button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button><img id="lightboxImg" alt="Certificate preview" /></div>
+    </section>
+
+    <!-- ALBUM -->
+    <section class="section" id="album">
+      <header class="section-head reveal">
+        <span class="section-num">07</span>
+        <h2>Album</h2>
+        <span class="section-sub">Friends, boyfriend &amp; furbabies</span>
+      </header>
+      <div class="album-grid">
+        <article class="album a1 reveal" data-folder="friends" data-count="8" tabindex="0" role="button" aria-label="Friends album. Hover, tap or press Enter to play the slideshow">
+          <div class="album-frame">
+            <div class="album-window">
+              <div class="album-empty"><span>♡</span><small>Photos go in images/albums/friends</small></div>
+              <div class="album-badge" hidden><span class="now">1</span> / <span class="total">1</span></div>
+            </div>
+            <div class="album-caption"><h3>Friends</h3><p><span class="hint-hover">Hover to play</span><span class="hint-touch">Tap to play</span></p></div>
+          </div>
+        </article>
+        <article class="album a2 reveal" data-folder="boyfriend" data-count="8" tabindex="0" role="button" aria-label="Boyfriend album. Hover, tap or press Enter to play the slideshow">
+          <div class="album-frame">
+            <div class="album-window">
+              <div class="album-empty"><span>✦</span><small>Photos go in images/albums/boyfriend</small></div>
+              <div class="album-badge" hidden><span class="now">1</span> / <span class="total">1</span></div>
+            </div>
+            <div class="album-caption"><h3>Boyfriend</h3><p><span class="hint-hover">Hover to play</span><span class="hint-touch">Tap to play</span></p></div>
+          </div>
+        </article>
+        <article class="album a3 reveal" data-folder="furbabies" data-count="8" tabindex="0" role="button" aria-label="Furbabies album. Hover, tap or press Enter to play the slideshow">
+          <div class="album-frame">
+            <div class="album-window">
+              <div class="album-empty"><span>❀</span><small>Photos go in images/albums/furbabies</small></div>
+              <div class="album-badge" hidden><span class="now">1</span> / <span class="total">1</span></div>
+            </div>
+            <div class="album-caption"><h3>Furbabies</h3><p><span class="hint-hover">Hover to play</span><span class="hint-touch">Tap to play</span></p></div>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- MUSIC -->
     <section class="section" id="music">
       <header class="section-head reveal">
-        <span class="section-num">07</span>
+        <span class="section-num">08</span>
         <h2>My Music</h2>
         <span class="section-sub">Favorite songs &amp; player</span>
       </header>
@@ -264,8 +323,8 @@
           <div class="player-cover" id="playerCover"><span id="playerDisc">♪</span></div>
           <div class="player-info">
             <p class="player-label">Now playing</p>
-            <h3 id="playerTitle">Over the Moon</h3>
-            <p id="playerArtist">The Marías</p>
+            <h3 id="playerTitle">Beautiful World</h3>
+            <p id="playerArtist">Hikaru Utada</p>
           </div>
           <div class="progress" id="progress" role="slider" aria-label="Song progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
             <div class="progress-bar" id="progressBar"></div>
@@ -276,6 +335,7 @@
             <button id="playBtn" class="play" aria-label="Play">▶</button>
             <button id="nextBtn" aria-label="Next song">⏭</button>
           </div>
+          <a id="ytLink" class="yt-link" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
         </div>
         <ol class="playlist" id="playlist"></ol>
       </div>
@@ -284,7 +344,7 @@
     <!-- CONTACT -->
     <section class="section contact" id="contact">
       <header class="section-head reveal">
-        <span class="section-num">08</span>
+        <span class="section-num">09</span>
         <h2>Contact</h2>
         <span class="section-sub">Email &amp; social media</span>
       </header>
